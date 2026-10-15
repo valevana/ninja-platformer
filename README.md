@@ -1,58 +1,27 @@
-# 🥷 Ninja Platformer
+# Ninja Platformer
 
-A 3-level 2D action platformer I built solo in **Unreal Engine 4** using **Blueprints** and **Paper2D**, as a college project at Belfast Metropolitan College.
+A 2D ninja platformer I made on my own in Unreal Engine 4 for my Level 3 IT course at Belfast Met. It has three levels, and you fight your way through them with a sword and throwing kunai, dodging traps and picking up coins and health along the way.
 
-<!-- Replace with a GIF of gameplay once recorded: ![Gameplay](media/gameplay.gif) -->
+Demo video: https://youtu.be/9Neo5mr7hUg
 
-**🎬 Demo video:** https://youtu.be/9Neo5mr7hUg
+## What's in it
 
-![Unreal Engine](https://img.shields.io/badge/Unreal_Engine_4-0D1117?style=for-the-badge&logo=unrealengine&logoColor=00FF41)
-![Blueprints](https://img.shields.io/badge/Blueprints-0D1117?style=for-the-badge&logo=unrealengine&logoColor=00FF41)
-![Paper2D](https://img.shields.io/badge/Paper2D-0D1117?style=for-the-badge&logoColor=00FF41)
+You can attack with the sword or throw kunai, both on the ground and in the air. There are exploding traps and kunai traps to avoid, coins to collect and mushrooms that give you health back. Reach the end of a level and it takes you to the next one. There's also a title menu, a HUD showing your health and coins, and a game over screen.
 
-## 🎮 Features
+## How I made it
 
-- **Combat:** sword attacks and throwable kunai, on the ground and mid-jump
-- **Animated character:** flipbook animations for idle, run, jump, attack, throw, jump-attack, jump-throw and death
-- **Hazards:** exploding traps and kunai traps
-- **Pickups:** collectable spinning coins and health pickups
-- **UI:** title menu, in-game HUD and game-over screen, built with UMG widgets
-- **Three levels:** an end-of-level trigger moves the player on through each level
+I started from Unreal's 2D Side Scroller template and built the game on top of it, with everything done in Blueprints (no C++).
 
-## 🛠️ How it's built
+Most of the work went into the character. I imported the sprite sheets, turned them into Paper2D flipbooks for each move (idle, run, jump, attack, throw, jump attack, jump throw and death) and then wired up the logic for switching between them, attacking, throwing kunai, taking damage and dying. After that I built the pickups, the traps, the end-of-level trigger and the UI widgets, and put the three levels together from a tileset.
 
-| Area | What I did |
-|---|---|
-| Character | Extended the UE4 2D Side Scroller template character with melee and ranged attacks, health and death |
-| Gameplay logic | All game logic written in **Blueprints**: pickups, traps, damage, level completion |
-| Animation | Imported sprite sheets, created Paper2D sprites and flipbooks for every action |
-| UI | Designed the HUD, title menu and game-over screen as widgets |
-| Level design | Built three levels from a tileset with platforms, hazards and pickups |
+It was my first proper game in Unreal, so it taught me a lot about how Blueprints, animation and game logic fit together.
 
-## 📁 Project structure
+## Running it
 
-```
-Config/        Project settings
-Content/
-├── Character/     Player animations (sprites + flipbooks)
-├── Items/         Coin, health and kunai pickups
-├── Items/Traps/   Exploding trap
-├── LevelItems/    Floor tiles and level pieces
-├── Levels/        Game levels
-├── EndLevel/      Level-complete logic
-└── Widgets/       HUD, title menu, game-over screen
-Source/        Original sprite and tileset art files
-LisanAlGaib.uproject
-```
+You'll need Unreal Engine 4 from the Epic Games Launcher. Clone the repo, open `LisanAlGaib.uproject`, load `Content/Levels/Level1` and press Play.
 
-## ▶️ How to run
+## Credits
 
-1. Install **Unreal Engine 4** via the Epic Games Launcher.
-2. Clone this repo and double-click `LisanAlGaib.uproject`.
-3. Open `Content/Levels/Level1` and press **Play**.
-
-## 🙏 Credits
-
-- Built on the Unreal Engine 4 **2D Side Scroller** template
-- Character sprites and tileset art: free assets from [GameArt2D](https://www.gameart2d.com/freebies.html)
-- Coin sound effect: from *Super Mario Bros.* (© Nintendo), included for educational purposes only. All rights belong to their respective owners.
+- Unreal Engine 4 2D Side Scroller template
+- Character and tileset art: free packs from [GameArt2D](https://www.gameart2d.com/freebies.html)
+- Coin sound: from Super Mario Bros. (© Nintendo), used for educational purposes only
