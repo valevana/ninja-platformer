@@ -2,7 +2,7 @@
 
 A 2D action platformer with three levels that I built solo in Unreal Engine 4 for my Level 3 IT course at Belfast Metropolitan College.
 
-**🎬 Demo video:** https://youtu.be/9Neo5mr7hUg
+**🎬 Demo video:** https://youtu.be/xAeYd5SrkoY
 
 ![Ninja Platformer gameplay](screenshot.png)
 
@@ -13,7 +13,7 @@ A 2D action platformer with three levels that I built solo in Unreal Engine 4 fo
 ## What I built
 - Started from Unreal's 2D Side Scroller template and built the whole game on top of it in Blueprints
 - Turned sprite sheets into Paper2D flipbooks for every move: idle, run, jump, attack, throw, jump attack, jump throw and death
-- Wrote the logic for melee and ranged combat, taking damage, health and dying
+- Wrote the logic for melee and ranged combat, health, stamina, lives, scoring and the level timer
 - Built the pickups, traps, end-of-level trigger and UI widgets
 - Designed three levels from a tileset
 
@@ -21,7 +21,8 @@ A 2D action platformer with three levels that I built solo in Unreal Engine 4 fo
 - Sword attacks and throwable kunai, on the ground and mid-jump
 - Exploding traps and kunai traps
 - Coins to collect and mushrooms that restore health
-- Title menu, HUD and game over screen
+- HUD with health and stamina bars, lives, score and a countdown timer
+- Title menu and game over screen
 - Three levels, with an end-of-level trigger that moves you on to the next
 
 ## Project structure
