@@ -1,27 +1,50 @@
 # Ninja Platformer
 
-A 2D ninja platformer I made on my own in Unreal Engine 4 for my Level 3 IT course at Belfast Met. It has three levels, and you fight your way through them with a sword and throwing kunai, dodging traps and picking up coins and health along the way.
+A 2D action platformer with three levels that I built solo in Unreal Engine 4 for my Level 3 IT course at Belfast Metropolitan College.
 
-Demo video: https://youtu.be/9Neo5mr7hUg
+**🎬 Demo video:** https://youtu.be/9Neo5mr7hUg
 
-## What's in it
+![Ninja Platformer gameplay](screenshot.png)
 
-You can attack with the sword or throw kunai, both on the ground and in the air. There are exploding traps and kunai traps to avoid, coins to collect and mushrooms that give you health back. Reach the end of a level and it takes you to the next one. There's also a title menu, a HUD showing your health and coins, and a game over screen.
+![Unreal Engine](https://img.shields.io/badge/Unreal_Engine_4-313131?logo=unrealengine&logoColor=white)
+![Blueprints](https://img.shields.io/badge/Blueprints-0E1128?logo=unrealengine&logoColor=white)
+![Paper2D](https://img.shields.io/badge/Paper2D-1F6FEB)
 
-## How I made it
+## What I built
+- Started from Unreal's 2D Side Scroller template and built the whole game on top of it in Blueprints
+- Turned sprite sheets into Paper2D flipbooks for every move: idle, run, jump, attack, throw, jump attack, jump throw and death
+- Wrote the logic for melee and ranged combat, taking damage, health and dying
+- Built the pickups, traps, end-of-level trigger and UI widgets
+- Designed three levels from a tileset
 
-I started from Unreal's 2D Side Scroller template and built the game on top of it, with everything done in Blueprints (no C++).
+## Features
+- Sword attacks and throwable kunai, on the ground and mid-jump
+- Exploding traps and kunai traps
+- Coins to collect and mushrooms that restore health
+- Title menu, HUD and game over screen
+- Three levels, with an end-of-level trigger that moves you on to the next
 
-Most of the work went into the character. I imported the sprite sheets, turned them into Paper2D flipbooks for each move (idle, run, jump, attack, throw, jump attack, jump throw and death) and then wired up the logic for switching between them, attacking, throwing kunai, taking damage and dying. After that I built the pickups, the traps, the end-of-level trigger and the UI widgets, and put the three levels together from a tileset.
+## Project structure
+```
+Config/            Project settings
+Content/
+├── Character/     Player sprites and animations
+├── Items/         Coins, health, kunai and traps
+├── LevelItems/    Floor tiles and level pieces
+├── Levels/        Game levels
+├── EndLevel/      Level-complete logic
+└── Widgets/       HUD, title menu and game over screen
+Source/            Original sprite and tileset art
+LisanAlGaib.uproject
+```
 
-It was my first proper game in Unreal, so it taught me a lot about how Blueprints, animation and game logic fit together.
-
-## Running it
-
-You'll need Unreal Engine 4 from the Epic Games Launcher. Clone the repo, open `LisanAlGaib.uproject`, load `Content/Levels/Level1` and press Play.
+## Run locally
+Install Unreal Engine 4 from the Epic Games Launcher, clone the repo, open `LisanAlGaib.uproject`, load `Content/Levels/Level1` and press Play.
 
 ## Credits
-
 - Unreal Engine 4 2D Side Scroller template
 - Character and tileset art: free packs from [GameArt2D](https://www.gameart2d.com/freebies.html)
 - Coin sound: from Super Mario Bros. (© Nintendo), used for educational purposes only
+
+---
+*Created as a college project for educational purposes.*
